@@ -20,8 +20,9 @@ Route::resource('cierreSesion','ControladorInicioSesion@cerrarSesion');
 
 //Rutas de las pantallas del administrador
 Route::get('inicioAdministracion/retornarIngredientes','ControladorAdministracion@retornarIngredientes');
-//Route::get('inicioAdministracion/editarIngrediente/{idIngrediente}','ControladorAdministracion@editarIngrediente');
-Route::get('inicioAdministracion/actualizarIngrediente/{idIngrediente}',['uses'=>'ControladorAdministracion@editarIngrediente', 'as'=>'ControladorAdministracion@editarIngrediente']);
+Route::get('inicioAdministracion/editarIngrediente/{idIngrediente}','ControladorAdministracion@editarIngrediente');
+Route::put('inicioAdministracion/actualizarIngrediente/{idIngrediente}',['uses'=>'ControladorAdministracion@actualizarIngrediente','as'=>'inicioAdministracion.actualizarIngrediente']);
+//Route::get('inicioAdministracion/actualizarIngrediente/{idIngrediente}',['uses'=>'ControladorAdministracion@editarIngrediente', 'as'=>'ControladorAdministracion@editarIngrediente']);
 Route::get('inicioAdministracion/retornarPedidos','ControladorAdministracion@retornarPedidos');
 
 //Rutas de las pantallas del mesero
@@ -29,5 +30,7 @@ Route::get('inicioPedidos/areaPedidos','ControladorVistas@inicioPedidos');
 Route::post('inicioPedidos/areaPedidos/crearPedido',['uses'=>'ControladorPedidos@crearPedido', 'as'=>'inicioPedidos.areaPedidos.crearPedido']);
 
 
-//Route::resource('inicioAdministracionEditarIngrediente', 'ControladorAdministracion@editarIngrediente');
+Route::resource('inicioAdministracion', 'ControladorAdministracion@editarIngrediente');
 Route::resource('mesero', 'ControladorPedidos');
+
+//edicion de ingrediente

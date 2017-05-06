@@ -122,7 +122,7 @@
 							<td>{{$ingrediente->nombre_ingrediente}}</td>
 							<td>{{$ingrediente->cantidad}}</td>
 							<td>
-								{!!link_to_action('ControladorAdministracion@editarIngrediente', $title = 'Editar', $parameters = [$ingrediente])!!}
+								<a href="editarIngrediente/{{$ingrediente->idIngrediente}}" class="btn btn-warning">Editar</a>
 							</td>
 						</tbody>
 					@endforeach
@@ -132,6 +132,8 @@
 			</div>
 
 		</section>
+
+		
 
 	</main>
 
