@@ -156,6 +156,19 @@ class ControladorPedidos extends Controller
 			$comida = Comida::find('17');
 
 			$acumuladoValorFactura = $acumuladoValorFactura + ($comida->precio_comida * $request->quesadillaQueso);
+
+			/*$listadoIngredientes = Ingrediente::all();
+			foreach ($listadoIngredientes as $ingrediente) {
+				if ($ingrediente->nombre_ingrediente == 'Queso mozarella') {
+					$ingrediente->cantidad = ($ingrediente->cantidad - 3);
+				}
+				if ($ingrediente->cantidad_ingrediente <= 5) {
+					Notificacion::create([
+						'ingrediente'->$ingrediente->nombre_ingrediente
+
+					]);
+				}
+			}*/
 		}
 
 //Si en la pantalla pedidos, se selecciona alguna cantidad de gringas chicharronas, se crea el registro del pedido en la tabla intermedia entre pedido y comida

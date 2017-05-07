@@ -19,7 +19,6 @@ class CreateIngredienteComidaTable extends Migration
             $table->foreign('Ingrediente_idIngrediente')->references('idIngrediente')->on('ingrediente');
             $table->integer('Comida_idComida')->unsigned();
             $table->foreign('Comida_idComida')->references('idComida')->on('Comida');
-            $table->integer('cantidad_ingrediente');
             $table->timestamps();
 
         });

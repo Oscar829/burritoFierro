@@ -1,12 +1,8 @@
 @extends('layouts.plantillaInicioAdministracion')
 
 @section('pantallaEditarIngrediente')
-</br>
-</br>
-</br>
-</br>
 
-	{!!Form::model($ingrediente, ['route' => ['inicioAdministracion.actualizarIngrediente', $ingrediente->idIngrediente],'method'=>'PUT'])!!}
+	{!!Form::model($ingrediente, ['route' => ['inicioAdministracion/actualizarIngrediente', $ingrediente]])!!}
 
 			<h2>Editar la cantidad de un ingrediente</h2>
 
