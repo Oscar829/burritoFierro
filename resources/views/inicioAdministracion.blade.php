@@ -394,6 +394,7 @@
 
 					@foreach($listadoIngredientes as $ingrediente)
 						<tbody>
+<<<<<<< HEAD
 							<tr>
 								<td>{{$ingrediente->nombre_ingrediente}}</td>
 								<td>{{$ingrediente->cantidad}}</td>
@@ -401,6 +402,13 @@
 									<a href="editarIngrediente/{{$ingrediente->idIngrediente}}" class="btn btn-warning">Editar</a>
 								</td>
 							</tr>
+=======
+							<td>{{$ingrediente->nombre_ingrediente}}</td>
+							<td>{{$ingrediente->cantidad}}</td>
+							<td>
+								<a href="editarIngrediente/{{$ingrediente->idIngrediente}}" class="btn btn-warning">Editar</a>
+							</td>
+>>>>>>> origin/master
 						</tbody>
 					@endforeach
 						
@@ -410,6 +418,7 @@
 
 		</section>
 
+<<<<<<< HEAD
 		<section class="pantallaReportes">
 
 			</br>
@@ -439,6 +448,9 @@
 		<section class="pantallaNotificaciones">
 			
 		</section>
+=======
+		
+>>>>>>> origin/master
 
 	</main>
 

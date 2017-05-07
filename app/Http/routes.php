@@ -22,6 +22,10 @@ Route::resource('cierreSesion','ControladorInicioSesion@cerrarSesion');
 Route::get('inicioAdministracion/retornarIngredientes','ControladorAdministracion@retornarIngredientes');
 Route::get('inicioAdministracion/editarIngrediente/{idIngrediente}','ControladorAdministracion@editarIngrediente');
 Route::put('inicioAdministracion/actualizarIngrediente/{idIngrediente}',['uses'=>'ControladorAdministracion@actualizarIngrediente','as'=>'inicioAdministracion.actualizarIngrediente']);
+<<<<<<< HEAD
+=======
+//Route::get('inicioAdministracion/actualizarIngrediente/{idIngrediente}',['uses'=>'ControladorAdministracion@editarIngrediente', 'as'=>'ControladorAdministracion@editarIngrediente']);
+>>>>>>> origin/master
 Route::get('inicioAdministracion/retornarPedidos','ControladorAdministracion@retornarPedidos');
 
 Route::post('inicioAdministracion/retornarIngredientes/generarReporte',['uses'=>'ControladorAdministracion@generarReporte', 'as'=>'inicioAdministracion.retornarIngredientes.generarReporte']);
@@ -33,4 +37,10 @@ Route::post('inicioPedidos/areaPedidos/crearPedido',['uses'=>'ControladorPedidos
 
 
 Route::resource('inicioAdministracion', 'ControladorAdministracion@editarIngrediente');
+<<<<<<< HEAD
 Route::resource('mesero', 'ControladorPedidos');
+=======
+Route::resource('mesero', 'ControladorPedidos');
+
+//edicion de ingrediente
+>>>>>>> origin/master

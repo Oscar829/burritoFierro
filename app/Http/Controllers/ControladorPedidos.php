@@ -298,7 +298,10 @@ class ControladorPedidos extends Controller
 			$comida = Comida::find('17');
 
 			$acumuladoValorFactura = $acumuladoValorFactura + ($comida->precio_comida * $request->quesadillaQueso);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 		}
 
 		return $acumuladoValorFactura;		

@@ -6,12 +6,13 @@ use Illuminate\Http\Request;
 use App\http\Controllers\Controller;
 use App\Pedido;
 use App\Ingrediente;
-use App\Comida;
-use App\Bebida;
 use App\Pedido__Comida;
+<<<<<<< HEAD
 use App\Pedido__Bebida;
 use App\Factura;
 use Illuminate\Support\Facades\DB;
+=======
+>>>>>>> origin/master
 use Session;
 use Redirect;
 use Carbon\Carbon;
@@ -101,6 +102,7 @@ public function generarPedidoBebidaMesaDos(){
 	return $bebidasMesaDos;
 }
 
+<<<<<<< HEAD
 
 /*Método para verificar las comidas pedidas para la mesa tres*/
 public function generarPedidoComidaMesaTres(){
@@ -307,23 +309,35 @@ public function generarPedidoBebidaMesaSiete(){
 }
 
 
+=======
+>>>>>>> origin/master
 
 /*Método para editar un ingrediente del inventario, simplemente se actualizará la cantidad de dicho ingrediente existente en el inventario*/
-	public function editarIngrediente($ingrediente){
+	public function editarIngrediente($idIngrediente){
 
-		$ingrediente = Ingrediente::find($ingrediente);
+		$ingrediente = Ingrediente::find($idIngrediente);
+		
 		return view('editarIngrediente', compact('ingrediente'));
-
 	}
 
 /*Método para actualizar la cantidad de un ingrediente en el inventario*/
+<<<<<<< HEAD
 	public function actualizarIngrediente(Request $request, $idIngrediente){
+=======
+	public function actualizarIngrediente(Request $request,$idIngrediente){
+>>>>>>> origin/master
 
 		$ingrediente = Ingrediente::find($idIngrediente);
 		$ingrediente -> fill($request->all());
 		$ingrediente -> save();
+<<<<<<< HEAD
 
 		return Redirect::to('inicioAdministracion/retornarIngredientes');
+=======
+		
+		return Redirect::to('inicioAdministracion/retornarIngredientes');
+		
+>>>>>>> origin/master
 
 	}
 
@@ -550,6 +564,20 @@ public function generarPedidoBebidaMesaSiete(){
 		}
 
 		return $acumuladorValorFacturasAnio;
+
+	}
+	public function edit($ingrediente){
+		dd('edit');
+		//$ingrediente = Ingrediente::findOrFail($ingrediente);
+		//$ingrediente = Ingrediente::find($ingrediente);
+		//return view('editarIngrediente', compact('ingrediente'));
+
+
+		$ingrediente = Ingrediente::find($idIngrediente);
+		$ingrediente -> fill($request->all());
+		$ingrediente -> save();
+
+		return Redirect::to('inicioAdministracion');
 
 	}
 
